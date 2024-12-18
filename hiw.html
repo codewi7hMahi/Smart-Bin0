@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image with Buttons</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('file:///C:/Users/Mahima/OneDrive/Desktop/ebin/ucla-campus-bru52f8mka94m5pq.jpg'); /* Replace with actual smart bin image URL */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+           
+        }
+
+        .top-right-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .top-right-buttons button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .top-right-buttons .signup {
+            background-color: #007bff;
+        }
+
+        .top-right-buttons .login {
+            background-color: #28a745;
+        }
+
+        .top-right-buttons button:hover {
+            opacity: 0.8;
+        }
+
+        .center-image img {
+            max-width: 300%;
+            height: auto;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-right-buttons">
+        <button class="signup" onclick="alert('Sign Up Clicked!')">Sign Up</button>
+        <button class="login" onclick="alert('Login Clicked!')">Login
+             <a href=" login%20pg.html "> </a>
+        </button>
+    </div>
+
+    <div class="center-image">
+        <img src="file:///C:/Users/Mahima/OneDrive/Desktop/ebin/htow.jpg" alt="Centered Image">
+    </div>
+
+    <script>
+        // Add any additional JavaScript functionality if needed
+        console.log('Page loaded successfully');
+    </script>
+</body>
+</html>

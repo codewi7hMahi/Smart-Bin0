@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Trash Bin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Left Side: Dustbin Image and Buttons */
+    .left-side {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #e4efe6;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .left-side img.dustbin {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .image-button img {
+      width: 150px;
+      height: 100px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Right Side: Dustbin Image */
+    .right-side {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    .right-side img.dustbin {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Top Banner */
+    .top-banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #4CAF50;
+      padding: 0 20px;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .top-banner h1 {
+      font-size: 1.5em;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .auth-btn {
+      padding: 8px 15px;
+      background-color: #ffffff;
+      color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .auth-btn:hover {
+      background-color: #45a049;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-banner">
+    <h1>Smart Trash Bin</h1>
+    <div class="auth-buttons">
+      <button class="auth-btn" onclick="location.href='login.html'">Login</button>
+      <button class="auth-btn" onclick="location.href='signup.html'">Sign Up</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-side">
+      <img src="file:///C:/Users/Mahima/OneDrive/Desktop/ebin/dustbin.jpg" alt="Dustbin" class="dustbin">
+      <button class="image-button">
+        <img src="file:///C:/Users/Mahima/OneDrive/Desktop/ebin/HIW.png" alt="Image 1">
+      </button>
+      <button class="image-button">
+        <img src="file:///C:/Users/Mahima/OneDrive/Desktop/ebin/fr.png" alt="Image 2">
+      </button>
+      <button class="image-button">
+        <img src="file:///C:/Users/Mahima/OneDrive/Desktop/ebin/contact%20us.jpg" alt="Image 3">
+      </button>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right-side">
+      <img src="file:///C:/Users/Mahima/OneDrive/Desktop/ebin/dustbin-right.jpg" alt="Dustbin" class="dustbin">
+    </div>
+  </div>
+</body>
+</html>

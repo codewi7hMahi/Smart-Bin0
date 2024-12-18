@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attractive Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #7eecaa, #fad0c4);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-buttons a {
+            margin-left: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background: #ff6f61;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .auth-buttons a:hover {
+            background: #e55b50;
+        }
+
+        .main-content {
+            text-align: center;
+        }
+
+        .image-buttons {
+            display: flex;
+            justify-content: left;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .image-buttons button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            outline: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-buttons button img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-buttons button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+         .header h1 {
+            font-size: 3em;
+            color: #2d3d42;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #a0b2b7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Smart Bin</h1>
+    <p>Your waste management solution</p>
+    <header>
+        <div class="auth-buttons">
+            <a href=" login%20pg.html " id="login">Login
+
+            </a>
+            <a href=" signup%20pg.html " id="signup">Signup</a>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="image-buttons">
+            <button id="button1">
+                <img src="file:///C:/Users/Mahima/OneDrive/Desktop/ebin/HIW.png" alt="Button 1">
+                
+                <button id="button2">
+                <img src="file:///C:/Users/Mahima/OneDrive/Desktop/ebin/fr.png" alt="Button 2"> </a>
+            </button>
+            
+            <button id="button3">
+                <img src="file:///C:/Users/Mahima/OneDrive/Desktop/ebin/contact%20us.jpg" alt="Button 3">
+            </button> 
+        </div>
+        <script>
+            // Add event listeners to each button
+            document.getElementById('button1').addEventListener('click', function() {
+                window.location.href = 'file:///C:/Users/Mahima/OneDrive/Desktop/ebin/hiw.html';
+            });
+    
+            document.getElementById('button2').addEventListener('click', function() {
+                window.location.href = 'file:///C:/Users/Mahima/OneDrive/Desktop/ebin/rtf.html';
+            });
+    
+            document.getElementById('button3').addEventListener('click', function() {
+                window.location.href = 'file:///C:/Users/Mahima/OneDrive/Desktop/ebin/cont.html';
+            });
+        </script> 
+
+
+ 
+</body>
+</html>

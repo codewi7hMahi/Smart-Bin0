@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bin Ideas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .idea-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .idea-section h2 {
+            color: #333;
+        }
+
+        .idea-section p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 2rem;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-buttons button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .call-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .call-btn:hover {
+            background-color: #45a049;
+        }
+
+        .chat-btn {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .chat-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .chatbox {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .chatbox-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.8rem;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .chatbox-body {
+            padding: 1rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .chatbox-footer {
+            display: flex;
+            padding: 0.5rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .chatbox-footer input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+
+        .chatbox-footer button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .chatbox-footer button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Smart Bin Ideas</h1>
+    </header>
+    <main>
+        <section class="idea-section">
+            <h2>Why Choose a Smart Bin?</h2>
+            <p>Our smart bins are designed to revolutionize waste management. With features like automatic sorting, fill-level monitoring, and app connectivity, smart bins help reduce waste overflow, enhance recycling efficiency, and keep your environment clean.</p>
+        </section>
+
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-buttons">
+                <button class="call-btn" onclick="makeCall()">Call Us</button>
+                <button class="chat-btn" onclick="toggleChatbox()">Chat with Us</button>
+            </div>
+        </section>
+
+        <div class="chatbox" id="chatbox">
+            <div class="chatbox-header">Chat with Us</div>
+            <div class="chatbox-body" id="chatbox-body">
+                <p><strong>Support:</strong> Hi! How can we help you?</p>
+            </div>
+            <div class="chatbox-footer">
+                <input type="text" id="chat-input" placeholder="Type your message here...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function makeCall() {
+            window.location.href = 'tel:+1234567890';
+        }
+
+        function toggleChatbox() {
+            const chatbox = document.getElementById('chatbox');
+            chatbox.style.display = chatbox.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function sendMessage() {
+            const chatInput = document.getElementById('chat-input');
+            const chatboxBody = document.getElementById('chatbox-body');
+            const message = chatInput.value.trim();
+
+            if (message) {
+                const userMessage = document.createElement('p');
+                userMessage.innerHTML = `<strong>You:</strong> ${message}`;
+                chatboxBody.appendChild(userMessage);
+                chatInput.value = '';
+
+                // Auto-reply from the bot
+                const botReply = document.createElement('p');
+                botReply.innerHTML = `<strong>Support:</strong> Thank you for reaching out! We'll assist you shortly.`;
+                chatboxBody.appendChild(botReply);
+
+                // Scroll to the bottom of the chatbox
+                chatboxBody.scrollTop = chatboxBody.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>

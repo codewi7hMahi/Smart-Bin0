@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommend to Your Friends</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .recommend-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .recommend-form h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border: 1px solid #4CAF50;
+            color: #4CAF50;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recommend to Your Friends</h1>
+    </header>
+    <main>
+        <div class="recommend-form">
+            <h2>Send a Recommendation</h2>
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="friend-email">Friend's Email:</label>
+                <input type="email" id="friend-email" placeholder="Enter friend's email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" placeholder="Write a short message"></textarea>
+            </div>
+            <button onclick="sendRecommendation()">Send</button>
+            <div id="confirmation" class="message">Recommendation sent successfully!</div>
+        </div>
+    </main>
+
+    <script>
+        function sendRecommendation() {
+            const name = document.getElementById('name').value;
+            const friendEmail = document.getElementById('friend-email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && friendEmail && message) {
+                // Simulating a recommendation being sent
+                const confirmation = document.getElementById('confirmation');
+                confirmation.style.display = 'block';
+
+                setTimeout(() => {
+                    confirmation.style.display = 'none';
+                    document.getElementById('name').value = '';
+                    document.getElementById('friend-email').value = '';
+                    document.getElementById('message').value = '';
+                }, 3000);
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+    </script>
+</body>
+</html>

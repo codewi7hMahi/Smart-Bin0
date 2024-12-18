@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half Background Design</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            display: flex;
+        }
+        .left-half {
+            flex: 1;
+            background: url('dustbin-university.jpg') no-repeat center center/cover;
+        }
+        .right-half {
+            flex: 1;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-half"></div>
+        <div class="right-half"></div>
+    </div>
+</body>
+</html>
